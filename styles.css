@@ -1,0 +1,299 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.app-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e1e2d;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #4e54c8;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.balance {
+    background-color: #4e54c8;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(78, 84, 200, 0.2);
+}
+
+.balance h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.balance p {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.expense-form {
+    background-color: #f9fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.expense-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.expense-form input:focus {
+    border-color: #4e54c8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.2);
+}
+
+.expense-form button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expense-form button:hover {
+    background-color: #3b3fc1;
+}
+
+.expense-summary {
+    background-color: #f9fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-summary h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1e1e2d;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.summary-item {
+    text-align: center;
+    flex: 1;
+}
+
+.summary-item p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4e54c8;
+}
+
+.expense-list {
+    background-color: #f9fafc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.expense-list h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1e1e2d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.expense-list ul {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.expense-list li {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.expense-list li:hover {
+    transform: translateY(-3px);
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-details span {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.expense-details span.amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff4d4f;
+}
+
+.expense-list button {
+    background-color: transparent;
+    border: none;
+    color: #ff4d4f;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.expense-list button:hover {
+    color: #d9363e;
+}
+
+@media (max-width: 500px) {
+    .app-container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .balance p {
+        font-size: 1.8rem;
+    }
+
+    .expense-form button,
+    .expense-form input {
+        font-size: 0.9rem;
+    }
+
+    .expense-summary h2,
+    .expense-list h2 {
+        font-size: 1rem;
+    }
+
+    .expense-details span {
+        font-size: 0.9rem;
+    }
+
+    .expense-details span.amount {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Add Money Form Styling */
+.add-money-form {
+    background-color: #f9fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.add-money-form h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1e1e2d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-money-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-money-form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.add-money-form input:focus {
+    border-color: #4e54c8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.2);
+}
+
+.add-money-form button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-money-form button:hover {
+    background-color: #3b3fc1;
+}

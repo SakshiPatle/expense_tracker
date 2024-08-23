@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Expense Tracker</h1>
+    
+        <!-- Current Balance -->
+        <div class="balance">
+            <h2>Current Balance</h2>
+            <p><span id="balance">0.00</span></p>
+        </div>
+    
+        <!-- Add Money Form -->
+        <div class="add-money-form">
+            <h2>Add Money</h2>
+            <form id="add-money-form">
+                <input type="number" id="money-amount" placeholder="Enter amount" required>
+                <button type="submit">Add Money</button>
+            </form>
+        </div>
+    
+        <!-- Expense Summary -->
+        <div class="expense-summary">
+            <div class="summary-item">
+                <h2>Total Spent</h2>
+                <p>₹<span id="total-spent">0.00</span></p>
+            </div>
+            <div class="summary-item">
+                <h2>Number of Expenses</h2>
+                <p><span id="expense-count">0</span></p>
+            </div>
+        </div>
+    
+        <!-- Expense Form -->
+        <div class="expense-form">
+            <h2>Add New Expense</h2>
+            <br>
+            <form id="expense-form">
+                <input type="text" id="description" placeholder="Expense description" required>
+                <input type="number" id="amount" placeholder="Expense amount" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+    
+        <!-- Expense List -->
+        <div class="expense-list">
+            <h2>Your Expenses</h2>
+            <ul id="expenses"></ul>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
